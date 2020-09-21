@@ -93,6 +93,113 @@
             </objects>
             <point key="canvasLocation" x="139" y="98"/>
         </scene>
+        <!--Resturants-->
+        <scene sceneID="Inf-ga-tvj">
+            <objects>
+                <tableViewController id="RGB-Md-cqg" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bFE-S9-7F6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResturantsCell" rowHeight="183" id="Uyu-pb-Yaf">
+                                <rect key="frame" x="0.0" y="28" width="414" height="183"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uyu-pb-Yaf" id="LQ4-ri-rJ6">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="183"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zey-SN-Ih5">
+                                            <rect key="frame" x="20" y="11" width="374" height="161"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Thr-zW-HH3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="161"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="300" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fgw-tO-YIE" userLabel="Resturant">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="119"/>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JYV-OE-hdB">
+                                                            <rect key="frame" x="0.0" y="129" width="374" height="32"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="100" verticalHuggingPriority="251" text="McDonalds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGA-zH-YJ9" userLabel="Resturant Name">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="292.5" height="25"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jHT-Wq-OzB">
+                                                                    <rect key="frame" x="312.5" y="0.0" width="61.5" height="24"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMH-iF-zqc" userLabel="Distance">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="32.5" height="24"/>
+                                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0W3-n6-LQZ" userLabel="Distance">
+                                                                            <rect key="frame" x="37.5" y="0.0" width="24" height="24"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="24" id="45C-1G-LGk"/>
+                                                                                <constraint firstAttribute="height" constant="24" id="Gle-JE-Js7"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Thr-zW-HH3" secondAttribute="bottom" id="P9S-Gk-Yt4"/>
+                                                <constraint firstItem="Thr-zW-HH3" firstAttribute="leading" secondItem="zey-SN-Ih5" secondAttribute="leading" id="X8Z-5v-xWv"/>
+                                                <constraint firstAttribute="trailing" secondItem="Thr-zW-HH3" secondAttribute="trailing" id="sx6-ru-reE"/>
+                                                <constraint firstItem="Thr-zW-HH3" firstAttribute="top" secondItem="zey-SN-Ih5" secondAttribute="top" id="vq6-5U-QX8"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zey-SN-Ih5" firstAttribute="top" secondItem="LQ4-ri-rJ6" secondAttribute="topMargin" id="Ni5-YH-6bC"/>
+                                        <constraint firstItem="zey-SN-Ih5" firstAttribute="leading" secondItem="LQ4-ri-rJ6" secondAttribute="leadingMargin" id="SG4-cv-Qsi"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="zey-SN-Ih5" secondAttribute="trailing" id="cx8-K6-Jcb"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="zey-SN-Ih5" secondAttribute="bottom" id="oUZ-Wy-GOg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RGB-Md-cqg" id="Med-TU-xaf"/>
+                            <outlet property="delegate" destination="RGB-Md-cqg" id="txT-u6-onx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Resturants" id="rOZ-vN-lna"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LvR-9M-f76" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808.6956521739132" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ccP-AX-ctP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3PE-cV-GuT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Yii-gp-KUf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RGB-Md-cqg" kind="relationship" relationship="rootViewController" id="3in-sq-O84"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G3I-dS-faW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="898.55072463768124" y="97.767857142857139"/>
+        </scene>
     </scenes>
     <resources>
         <image name="location-permission" width="1073" height="968"/>
