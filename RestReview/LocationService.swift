@@ -15,9 +15,9 @@ enum Result<T>{
 }
 
 final class LocationService: NSObject{
-    private let manger : CLLocationManager
+    private let manager : CLLocationManager
     init(manager: CLLocationManager = .init()) {
-        self.manger = manager
+        self.manager = manager
         super.init()
         manager.delegate = self
     }
@@ -27,6 +27,14 @@ final class LocationService: NSObject{
 
     var status : CLAuthorizationStatus{
         return CLLocationManager.authorizationStatus()
+    }
+    
+    func requestLocationAuthorization(){
+        print("pressed")
+        manager.requestWhenInUseAuthorization()
+    }
+    func getLocation(){
+        manager.requestLocation()
     }
 }
 extension LocationService: CLLocationManagerDelegate{
