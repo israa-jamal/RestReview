@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yey-d6-dxt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Location View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RestReview" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LocationViewController" customModule="RestReview" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,10 @@
                                                 <integer key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="allow:" destination="gy3-Bp-NVh" eventType="touchUpInside" id="RIk-0n-hQO"/>
+                                            <action selector="allowPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K7r-DY-THB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go6-5s-q33">
                                         <rect key="frame" x="32" y="66" width="350" height="50"/>
@@ -72,6 +76,10 @@
                                                 <integer key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="deny:" destination="gy3-Bp-NVh" eventType="touchUpInside" id="c1m-ZN-9Es"/>
+                                            <action selector="denyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ia-0N-qji"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="8" left="32" bottom="8" right="32"/>
@@ -89,21 +97,26 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="allowButton" destination="dCP-xi-Vjd" id="9qs-fo-9e3"/>
+                        <outlet property="denyButton" destination="go6-5s-q33" id="py2-HB-Jdj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="gy3-Bp-NVh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="139" y="98"/>
         </scene>
         <!--Restaurants-->
         <scene sceneID="Inf-ga-tvj">
             <objects>
-                <tableViewController id="RGB-Md-cqg" sceneMemberID="viewController">
+                <tableViewController id="RGB-Md-cqg" customClass="RestaurantTableViewController" customModule="RestReview" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bFE-S9-7F6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantsCell" rowHeight="183" id="Uyu-pb-Yaf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantsCell" rowHeight="183" id="Uyu-pb-Yaf" customClass="RestaurantTableViewCell" customModule="RestReview" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="183"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uyu-pb-Yaf" id="LQ4-ri-rJ6">
@@ -168,6 +181,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="distantIcon" destination="0W3-n6-LQZ" id="hIV-Q4-Dci"/>
+                                    <outlet property="distantLabel" destination="lMH-iF-zqc" id="Rgs-mn-wmQ"/>
+                                    <outlet property="restaurantImageView" destination="fgw-tO-YIE" id="sB6-hZ-9Na"/>
+                                    <outlet property="restaurantLabel" destination="kGA-zH-YJ9" id="A0f-6r-5U4"/>
                                     <segue destination="yey-d6-dxt" kind="show" id="Jbq-1M-qDm"/>
                                 </connections>
                             </tableViewCell>
@@ -186,7 +203,7 @@
         <!--Title-->
         <scene sceneID="dVc-un-Mog">
             <objects>
-                <viewController id="yey-d6-dxt" sceneMemberID="viewController">
+                <viewController id="yey-d6-dxt" customClass="FoodDetailsViewController" customModule="RestReview" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KeQ-Kd-9rR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -332,6 +349,9 @@
                                 <rect key="frame" x="187.5" y="301" width="39" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="handleControl:" destination="yey-d6-dxt" eventType="valueChanged" id="s8V-SU-YnS"/>
+                                </connections>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -347,6 +367,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="38i-qJ-qw0"/>
                     <size key="freeformSize" width="414" height="1024"/>
+                    <connections>
+                        <outlet property="collectionView" destination="tvn-ZK-bPl" id="45s-1q-kfO"/>
+                        <outlet property="hoursLabel" destination="Irc-ZY-qfP" id="fnb-hR-Zpd"/>
+                        <outlet property="locationLabel" destination="gWE-Bn-cHh" id="1jz-k3-KcR"/>
+                        <outlet property="mapView" destination="j3L-bS-Pm6" id="rs0-GV-LXC"/>
+                        <outlet property="priceLabel" destination="Fei-Pn-d0p" id="6zq-tt-dAE"/>
+                        <outlet property="ratingLabel" destination="iHH-t4-ChW" id="MSX-y0-1Hj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cn6-n7-Dbi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
