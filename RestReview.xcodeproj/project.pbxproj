@@ -12,6 +12,7 @@
 		0408DDAB251E8983001EF87E /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408DDAA251E8983001EF87E /* RestaurantTableViewCell.swift */; };
 		0408DDAD251E8AF6001EF87E /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408DDAC251E8AF6001EF87E /* LocationView.swift */; };
 		0408DDAF251E8CE7001EF87E /* FoodDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408DDAE251E8CE7001EF87E /* FoodDetailsView.swift */; };
+		0408DDB3251E9620001EF87E /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408DDB2251E9620001EF87E /* LocationService.swift */; };
 		0471C6B82517F408009CBD45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471C6B72517F408009CBD45 /* AppDelegate.swift */; };
 		0471C6BA2517F408009CBD45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471C6B92517F408009CBD45 /* SceneDelegate.swift */; };
 		0471C6BC2517F408009CBD45 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471C6BB2517F408009CBD45 /* LocationViewController.swift */; };
@@ -27,6 +28,7 @@
 		0408DDAA251E8983001EF87E /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		0408DDAC251E8AF6001EF87E /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		0408DDAE251E8CE7001EF87E /* FoodDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsView.swift; sourceTree = "<group>"; };
+		0408DDB2251E9620001EF87E /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		0471C6B42517F408009CBD45 /* RestReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0471C6B72517F408009CBD45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0471C6B92517F408009CBD45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				0471C6B72517F408009CBD45 /* AppDelegate.swift */,
 				0471C6B92517F408009CBD45 /* SceneDelegate.swift */,
+				0408DDB2251E9620001EF87E /* LocationService.swift */,
 				0408DDB0251E8D58001EF87E /* Controllers */,
 				0408DDB1251E8D6F001EF87E /* Views */,
 				0471C6C02517F410009CBD45 /* Assets.xcassets */,
@@ -174,6 +177,7 @@
 			files = (
 				0471C6BC2517F408009CBD45 /* LocationViewController.swift in Sources */,
 				0408DDA9251E8963001EF87E /* RestaurantTableViewController.swift in Sources */,
+				0408DDB3251E9620001EF87E /* LocationService.swift in Sources */,
 				0471C6B82517F408009CBD45 /* AppDelegate.swift in Sources */,
 				0408DDAB251E8983001EF87E /* RestaurantTableViewCell.swift in Sources */,
 				0408DDA5251E87FC001EF87E /* FoodDetailsViewController.swift in Sources */,
